@@ -1,7 +1,7 @@
 import numpy as np
 import pylab as py
 import sys
-sys.path.append('C:\Users\CHRIS\Documents\Python Scripts\LearningScripts\ComputationalPhysicsExercises\ExamplesAndUseful')
+sys.path.append('cpresources')
 from gaussxw import gaussxw
 
 def func(x):
