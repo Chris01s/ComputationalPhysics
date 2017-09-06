@@ -1,3 +1,5 @@
+##This is code to produce a virtual simulation of a binary star system
+
 from visual import *
 
 ##
@@ -40,6 +42,7 @@ while 1:
 
   dist = dwarf.pos - giant.pos
   force = G * star.mass * dwarf.mass * dist / mag(dist)**3
+  
   ## leapfrog method
   giant.p = giant.p + force*dt
   dwarf.p = dwarf.p - force*dt
