@@ -36,6 +36,15 @@ def Adaptiverk4(f,t,r,tStop,h,sig=1e-6):
         return (k1 + 2*(k2 + k3) + k4)/6.0
         
     def adaptiveStep(h,r,t,sig):
+        '''A function to calculate the step size with an adaptive method, based on the ratio of the target error (Etarget)
+        to the calculated (Eacc) error. If the ratio is greater than 1, accept the yet keep the step size;
+        we are close enough to the solution.
+        if the ratio is less than or equal to 1, we modify the time step but recalculate the solution with it
+        using recursion, arguments:
+        h = time step
+        r = vector of solutions
+        t = point in time during iteration
+        '''
         r1 = r + rk4(h,r,t) 
         r1 += rk4(h,r1,t+h) 
         r2 = r + rk4(2*h,r,t)
