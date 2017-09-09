@@ -182,8 +182,8 @@ def DoubleInt(func, a, b, N):
     return integral
 
 ##Test!!
-##print Trapettoni(f,0.,2.,1000000)
-##print TheSimpsons(f,0.,2.,10)
+##print Trap(f,0.,2.,1000000)
+##print Simps(f,0.,2.,10)
 ##print Adapt_Trap(f,0.,2.,2)
 ##print GaussLeGde(f,0.,2.,3)
 ##print Romberg_Trap(f,0.,2.,5)
@@ -191,7 +191,7 @@ def DoubleInt(func, a, b, N):
 ##result = 0
 ##for i in range(1,len(x)):
 ##    h = abs(x[i-1] - x[i])/N
-##    result += TheSimpsons(E, x[i-1], x[i], h, N)
+##    result += Simps(E, x[i-1], x[i], h, N)
 ##    print result
 
 
