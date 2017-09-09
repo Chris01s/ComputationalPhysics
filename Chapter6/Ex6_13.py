@@ -26,16 +26,22 @@ def getRoot(x1,x2,epsilon):
             x = (x1+x2)/2.0
             break
     return x
+
+##Set initial values
 x1,x2 = 4,6
+#tolerance
 epsilon = 1E-6
+#plug two starting values into getRoot function
 x = getRoot(x1,x2,epsilon)
-h = 6.63E-34
-c = 2.9999E8
-k = 1.38E-23
-b = h*c/(k*x)
+
+#physical constants
+h = 6.63E-34 #Planck
+c = 2.9999E8 #Speed of light
+k = 1.38E-23 #Boltzmann
+b = h*c/(k*x) 
 print b
 
-#c)
+#c)Calculate the temperature of the Sun
 wav = 502E-9
 Tsun = b/wav
 print Tsun
