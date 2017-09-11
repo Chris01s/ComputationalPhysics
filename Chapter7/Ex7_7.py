@@ -1,5 +1,4 @@
 from numpy import*
-from numpy.fft import fft,irfft
 from pylab import plot,show,figure
 
 def FFT(x):
